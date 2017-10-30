@@ -1,0 +1,89 @@
+
+****************************************************************************
+***                       Sentaurus Workbench gsub                       ***
+***                          Version L-2016.03                           ***
+***                        (1.12, x86_64, Linux)                         ***
+***                                                                      ***
+***                Copyright (c) 1994-2016 Synopsys, Inc.                ***
+***                                                                      ***
+***  This software and the associated documentation are confidential     ***
+***  and proprietary to Synopsys, Inc.  Your use or disclosure of this   ***
+***  software is subject to the terms and conditions of a written        ***
+***  license agreement between you, or your company, and Synopsys, Inc.  ***
+****************************************************************************
+
+gsub is running on host 'ug132.eecg.toronto.edu' by user 'wangj261'
+Binary 'gsub'
+Command line options '-verbose -swb_pid 12055 -q local:default -e 97 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
+Current directory '/homes/w/wangj261'
+Some relevant environment variables:
+	STROOT=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/..
+	STRELEASE=current
+	STROOT_LIB=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib
+	STDB=/homes/w/wangj261/SentaurusDB
+	DATEX=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/datexcodes.txt
+	DISPLAY=:99
+
+Starting swblm daemon...OK
+Project '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
+Loading global tool database '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/glib2/tooldb.tcl'
+Loading project tool database '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gtooldb.tcl'
+02:33:07 Oct 30 2017 <Project1> submitted to the batch system
+Loading global queue configuration file '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../queues/gqueues.dat'...ok
+Loading project tree '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gtree.dat'
+>>>>> Preprocessing the project to run in normal mode
+Loading jobs and dependence graph '"/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gexec.cmd"'
+INITIALIZING PREPROCESSOR:
+Loading project tree '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gtree.dat'
+Loading project variables '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gvars.dat'
+--Get files to preprocess...
+--Create file handlers...
+--Read the toolflow...
+--Analyze tool-file dependencies...
+--Read all nodes to preprocess...
+--Group nodes into experiments...
+--Get all variables...
+--Get all parameters...
+PREPROCESSOR SUCCESSFULLY INITIALIZED.
+PREPROCESSING STEP 1:
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sde_dvs.cmd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sde_dvs.bnd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sdevice_des.cmd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sdevice.par
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/inspect_ins.cmd
+PREPROCESSING STEP 2:
+Preprocessing file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/inspect_ins.cmd fornode 97
+'@previous@' creates dependences with the node(s) '95'
+'@plot@' creates dependences with the node(s) '95'
++++Node successfully preprocessed+++
+The node '97' has dependencies to the node(s) '95'
+Writing 'gexec.cmd'
+saving variables
+Loading jobs and dependence graph '"/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gexec.cmd"'
+>>>>>>>>>> job '97' status changed from 'done' to 'queued'
+-----------------------------------------------------------------
+queue "local:default" - 97
+-----------------------------------------------------------------
+>>>>> cleaning the index file from previous simulations 
+                       /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/.gindex
+>>>>>>>>>> Initializing back-end schedulers...
+>>>>>>>> Loaded Schedulers are ... local
+local% initialize 'local' scheduler data
+>>>>> List of Active Schedulers : local
+<<<<<<<<<<
+>>>>>>>>>> job '97' status changed from 'queued' to 'ready'
+>>>>>>>>>> os_rm /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n97_ins.job
+local% submit job 97 for local execution
+>>>>>>>>>> job '97' status changed from 'ready' to 'pending'
+local% exec "/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../bin/gjob -verbose -nice 19  -job 97 -swb_pid 12055 -gsub_pid 12543 -gsub_host ug132.eecg.toronto.edu -gsub_port 39939 "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1""
+>>>>>>>>>> job '97' status changed from 'pending' to 'running'
+02:33:08 Oct 30 2017     job 97 <inspect> started on host 'ug132.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+>>>>>>>>>> job '97' status changed from 'running' to 'done'
+02:34:05 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+
+SCHEDULING REPORT
++++ done     : 97
+
+02:34:07 Oct 30 2017 <Project1> done (60 sec)
+>>>>>> Writing to status file 60
+gsub exits with status 0

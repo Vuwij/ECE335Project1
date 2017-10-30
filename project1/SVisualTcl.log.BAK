@@ -1,0 +1,51 @@
+###########################################
+# Sentaurus Visual L-2016.03.
+# Tcl log file.
+#------------------------------------------
+# Date: Oct 30, 2017. 00:08:23.
+# Version: 25.0.10 (1.10)
+# Mode: Interactive (GUI).
+# Hostname: ug132.
+# Machine: Linux, x86_64, x86_64.
+# Kernel: 4.9.0-3-amd64.
+###########################################
+
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n95_des.plt
+create_plot -1d
+select_plots Plot_1
+#-> Plot_1
+#-> Plot_1
+#-> n95_des
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n95_des.tdr
+create_plot -dataset n95_des_2
+select_plots Plot_n95_des_2
+#-> Plot_n95_des_2
+#-> Plot_n95_des_2
+#-> n95_des_2
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n95_des_min_des.tdr
+create_plot -dataset n95_des_min_des
+select_plots Plot_n95_des_min_des
+#-> Plot_n95_des_min_des
+#-> Plot_n95_des_min_des
+#-> n95_des_min_des
+remove_plots n95_des_min_des
+#!-> Error: Plots 'n95_des_min_des' could not be removed.
+remove_plots Plot_1
+#-> Plot_1
+select_plots Plot_n95_des_2
+#-> Plot_n95_des_2
+select_plots Plot_n95_des_min_des
+#-> Plot_n95_des_min_des
+remove_plot Plot_n95_des_min_des
+#!-> invalid command name "remove_plot"
+remove_plots Plot_n95_des_min_des
+#-> Plot_n95_des_min_des
+set_plot_prop -plot Plot_n95_des_2 -axes_interchanged
+#-> 0
+set_plot_prop -plot Plot_n95_des_2 -not_axes_interchanged
+#-> 0
+set_plot_prop -plot Plot_n95_des_2 -axes_interchanged
+#-> 0
+set_plot_prop -plot Plot_n95_des_2 -not_axes_interchanged
+#-> 0
+exit 0

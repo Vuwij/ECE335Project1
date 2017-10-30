@@ -1,0 +1,51 @@
+Evaluating file n98_dvs.cmd
+---> (sde:clear)
+#t
+---> (define tSub 10)
+tSub
+---> (define node 98)
+node
+---> (sdegeo:set-default-boolean ABA)
+"ABA"
+---> (sdegeo:create-rectangle (position 0 0 0) (position 2 tSub 0) Silicon Subs)
+#[body 9 1]
+---> (sdegeo:define-contact-set electrode_1 4 (color:rgb 1 0 0) solid)
+()
+---> (sdegeo:define-2d-contact (find-edge-id (position 1 0 0)) electrode_1)
+()
+---> (sdegeo:define-contact-set electrode_2 4 (color:rgb 0 1 0) ||)
+()
+---> (sdegeo:define-2d-contact (find-edge-id (position 1 tSub 0)) electrode_2)
+()
+---> (sdedr:define-constant-profile Const.Subs BoronActiveConcentration 8e+15)
+#t
+---> (sdedr:define-constant-profile-region PlaceCD.Subs Const.Subs Subs)
+#t
+---> (sdedr:define-constant-profile doping.profile.nplusSi PhosphorusActiveConcentration 2e+18)
+#t
+---> (sdedr:define-refeval-window window.nplusSi Rectangle (position 0 0 0.0) (position 2 1 0.0))
+#[body 14 1]
+---> (sdedr:define-constant-profile-placement place.nplusSi doping.profile.nplusSi window.nplusSi)
+#t
+---> (sdedr:define-refeval-window refw.ncSi Rectangle (position 0 0 0) (position 2 tSub 0))
+#[body 15 1]
+---> (sdedr:define-multibox-size refs.ncSi 1 (/ tSub 5) 0 1 (/ tSub 20) 0 1 1.1 0)
+#t
+---> (sdedr:define-multibox-placement Place.ncSi refs.ncSi refw.ncSi)
+#t
+---> (sdedr:define-refeval-window refw.nplus Rectangle (position 0 0 0) (position 2 1 0))
+#[body 16 1]
+---> (sdedr:define-multibox-size refs.nplus 1 (/ tSub 5) 0 1 (/ tSub 100) 0 1 1.2 0)
+#t
+---> (sdedr:define-multibox-placement Place.nplus refs.nplus refw.nplus)
+#t
+---> (sde:build-mesh snmesh  (string-append n node _msh))
+#t
+---> #[end-of-file]
+"************************************************************************"
+"Sentaurus Structure Editor "
+"Start Time:    Mon Oct 30 02:31:09 2017"
+"End   Time:    Mon Oct 30 02:31:10 2017"
+"Total Execution Time (sec):    1"
+"Total System calls Time (sec): 0"
+"************************************************************************"

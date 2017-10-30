@@ -1,0 +1,25 @@
+###########################################
+# Sentaurus Visual L-2016.03.
+# Tcl log file.
+#------------------------------------------
+# Date: Oct 30, 2017. 00:13:04.
+# Version: 25.0.10 (1.10)
+# Mode: Interactive (GUI).
+# Hostname: ug132.
+# Machine: Linux, x86_64, x86_64.
+# Kernel: 4.9.0-3-amd64.
+###########################################
+
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n98_bnd.tdr
+create_plot -dataset n98_bnd
+select_plots Plot_n98_bnd
+#-> Plot_n98_bnd
+#-> Plot_n98_bnd
+#-> n98_bnd
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n98_msh.tdr
+create_plot -dataset n98_msh
+select_plots Plot_n98_msh
+#-> Plot_n98_msh
+#-> Plot_n98_msh
+#-> n98_msh
+exit 0
