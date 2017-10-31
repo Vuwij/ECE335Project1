@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 OCT 2017 00:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 OCT 2017 02:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -413,11 +413,11 @@ File: ../plots/2b.png Graphic file (type png)
 Package pdftex.def Info: ../plots/2b.png used on input line 58.
 (pdftex.def)             Requested size: 469.75502pt x 280.78015pt.
  [3 <../plots/2a.png>]
-<../plots/3a.png, id=25, 835.12pt x 408.52625pt>
+<../plots/3a.png, id=25, 602.25pt x 301.125pt>
 File: ../plots/3a.png Graphic file (type png)
  <use ../plots/3a.png>
 Package pdftex.def Info: ../plots/3a.png used on input line 75.
-(pdftex.def)             Requested size: 469.75502pt x 229.80168pt.
+(pdftex.def)             Requested size: 469.75502pt x 234.88573pt.
  [4 <../plots/2b.png>]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ° in font ptmr7t!
@@ -428,11 +428,11 @@ File: ../plots/4a.png Graphic file (type png)
 Package pdftex.def Info: ../plots/4a.png used on input line 83.
 (pdftex.def)             Requested size: 469.77148pt x 200.76021pt.
  [5 <../plots/3a.png>]
-<../plots/4b.png, id=35, 835.12pt x 408.52625pt>
+<../plots/4b.png, id=34, 602.25pt x 301.125pt>
 File: ../plots/4b.png Graphic file (type png)
  <use ../plots/4b.png>
 Package pdftex.def Info: ../plots/4b.png used on input line 87.
-(pdftex.def)             Requested size: 469.76659pt x 200.7531pt.
+(pdftex.def)             Requested size: 469.77148pt x 200.76021pt.
  [6 <../plots/4a.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
@@ -452,16 +452,47 @@ Missing character: There is no — in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no ˆ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
-[7 <../plots/4b.png>] (./main.aux) )
+<../plots/5a.png, id=38, 602.25pt x 301.125pt>
+File: ../plots/5a.png Graphic file (type png)
+ <use ../plots/5a.png>
+Package pdftex.def Info: ../plots/5a.png used on input line 99.
+(pdftex.def)             Requested size: 469.75502pt x 234.88573pt.
+ [7 <../plots/4b.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+<../plots/5b.png, id=43, 816.04875pt x 479.7925pt>
+File: ../plots/5b.png Graphic file (type png)
+ <use ../plots/5b.png>
+Package pdftex.def Info: ../plots/5b.png used on input line 112.
+(pdftex.def)             Requested size: 469.75502pt x 276.19333pt.
+
+[8 <../plots/5a.png>] [9 <../plots/5b.png>] (./main.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5498 strings out of 492995
- 82088 string characters out of 6132704
+ 5508 strings out of 492995
+ 82258 string characters out of 6132704
  177461 words of memory out of 5000000
- 8943 multiletter control sequences out of 15000+600000
+ 8951 multiletter control sequences out of 15000+600000
  22659 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,10n,43p,779b,1920s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -475,10 +506,10 @@ cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (7 pages, 306158 bytes).
+Output written on main.pdf (9 pages, 350719 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
