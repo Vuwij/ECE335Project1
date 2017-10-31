@@ -39,7 +39,7 @@ Solve{
   NewCurrentFile=""
   Coupled (Iterations=100) { poisson electron hole  }
 
-  Quasistationary ( InitialStep=4e-3 Increment=1.1 Minstep=1e-4 MaxStep=1e-2
+  Quasistationary ( InitialStep=4e-4 Increment=1.1 Minstep=1e-6 MaxStep=1e-4
      Goal {
          Name="electrode_2" Voltage=-90
       }

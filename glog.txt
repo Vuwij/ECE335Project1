@@ -14,7 +14,7 @@
 
 gsub is running on host 'ug179.eecg.toronto.edu' by user 'wangj261'
 Binary 'gsub'
-Command line options '-verbose -swb_pid 15434 -q local:default -e 97 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
+Command line options '-verbose -swb_pid 15434 -q local:default -e 95 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
 Current directory '/homes/w/wangj261/Documents/ECE335'
 Some relevant environment variables:
 	STROOT=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/..
@@ -28,7 +28,7 @@ Starting swblm daemon...OK
 Project '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
 Loading global tool database '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/glib2/tooldb.tcl'
 Loading project tool database '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gtooldb.tcl'
-23:29:21 Oct 30 2017 <Project1> submitted to the batch system
+00:10:34 Oct 31 2017 <Project1> submitted to the batch system
 Loading global queue configuration file '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../queues/gqueues.dat'...ok
 Loading project tree '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gtree.dat'
 >>>>> Preprocessing the project to run in normal mode
@@ -52,17 +52,18 @@ Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sdevice_des.cm
 Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sdevice.par
 Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/inspect_ins.cmd
 PREPROCESSING STEP 2:
-Preprocessing file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/inspect_ins.cmd fornode 97
-'@previous@' creates dependences with the node(s) '95'
-'@plot@' creates dependences with the node(s) '95'
+Preprocessing file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sdevice_des.cmd fornode 95
+'@previous@' creates dependences with the node(s) '98'
+'@tdr@' creates dependences with the node(s) '98'
+Preprocessing file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sdevice.par fornode 95
 +++Node successfully preprocessed+++
-The node '97' has dependencies to the node(s) '95'
+The node '95' has dependencies to the node(s) '98'
 Writing 'gexec.cmd'
 saving variables
 Loading jobs and dependence graph '"/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gexec.cmd"'
->>>>>>>>>> job '97' status changed from 'done' to 'queued'
+>>>>>>>>>> job '95' status changed from 'done' to 'queued'
 -----------------------------------------------------------------
-queue "local:default" - 97
+queue "local:default" - 95
 -----------------------------------------------------------------
 >>>>> cleaning the index file from previous simulations 
                        /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/.gindex
@@ -71,19 +72,19 @@ queue "local:default" - 97
 local% initialize 'local' scheduler data
 >>>>> List of Active Schedulers : local
 <<<<<<<<<<
->>>>>>>>>> job '97' status changed from 'queued' to 'ready'
->>>>>>>>>> os_rm /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n97_ins.job
-local% submit job 97 for local execution
->>>>>>>>>> job '97' status changed from 'ready' to 'pending'
-local% exec "/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../bin/gjob -verbose -nice 19  -job 97 -swb_pid 15434 -gsub_pid 25359 -gsub_host ug179.eecg.toronto.edu -gsub_port 41539 "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1""
->>>>>>>>>> job '97' status changed from 'pending' to 'running'
-23:29:22 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
->>>>>>>>>> job '97' status changed from 'running' to 'done'
-23:29:42 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+>>>>>>>>>> job '95' status changed from 'queued' to 'ready'
+>>>>>>>>>> os_rm /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n95_des.job
+local% submit job 95 for local execution
+>>>>>>>>>> job '95' status changed from 'ready' to 'pending'
+local% exec "/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../bin/gjob -verbose -nice 19  -job 95 -swb_pid 15434 -gsub_pid 14328 -gsub_host ug179.eecg.toronto.edu -gsub_port 45503 "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1""
+>>>>>>>>>> job '95' status changed from 'pending' to 'running'
+00:10:35 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+>>>>>>>>>> job '95' status changed from 'running' to 'done'
+00:11:21 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
 
 SCHEDULING REPORT
-+++ done     : 97
++++ done     : 95
 
-23:29:44 Oct 30 2017 <Project1> done (23 sec)
->>>>>> Writing to status file 23
+00:11:23 Oct 31 2017 <Project1> done (49 sec)
+>>>>>> Writing to status file 49
 gsub exits with status 0

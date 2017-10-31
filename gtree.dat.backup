@@ -1,11 +1,11 @@
 # Copyright (C) 1994-2011 Synopsys Inc.
-# swbtree vcurrent, Mon Oct 30 22:59:02 2017
+# swbtree vcurrent, Tue Oct 31 00:07:51 2017
 
 # --- simulation flow
 sde sde "" {}
 sde tncSi "5" {10}
 sdevice sdevice "" {}
-sdevice temp "300" {300}
+sdevice temp "300" {300 300}
 inspect inspect "" {}
 # --- variables
 # --- scenarios and parameter specs
