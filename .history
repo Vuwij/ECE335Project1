@@ -1,0 +1,16 @@
+00:29:06 Oct 30 2017 <Project0> submitted to the batch system
+00:29:07 Oct 30 2017     job 8 <sde> started on host 'ug132.eecg.toronto.edu': "sde -e -l n8_dvs.cmd"
+00:29:09 Oct 30 2017 +++ job 8 <sde> done: exit(0)
+00:29:11 Oct 30 2017 <Project0> done (5 sec)
+00:29:19 Oct 30 2017 <Project0> submitted to the batch system
+00:29:19 Oct 30 2017     job 95 <sdevice> started on host 'ug132.eecg.toronto.edu': "sdevice pp95_des.cmd"
+00:29:22 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
+00:29:25 Oct 30 2017 <Project0> done (6 sec)
+00:29:28 Oct 30 2017 <Project0> submitted to the batch system
+00:29:29 Oct 30 2017     job 97 <inspect> started on host 'ug132.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+00:29:40 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+00:29:42 Oct 30 2017 <Project0> done (14 sec)
+02:24:32 Oct 30 2017 <Project0> submitted to the batch system
+02:24:33 Oct 30 2017     job 8 <sde> started on host 'ug132.eecg.toronto.edu': "sde -e -l n8_dvs.cmd"
+02:24:36 Oct 30 2017 +++ job 8 <sde> done: exit(0)
+02:24:38 Oct 30 2017 <Project0> done (6 sec)
