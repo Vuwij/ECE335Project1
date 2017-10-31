@@ -1,0 +1,20 @@
+###########################################
+# Sentaurus Visual L-2016.03.
+# Tcl log file.
+#------------------------------------------
+# Date: Oct 31, 2017. 01:47:58.
+# Version: 25.0.10 (1.10)
+# Mode: Interactive (GUI).
+# Hostname: ug179.
+# Machine: Linux, x86_64, x86_64.
+# Kernel: 4.9.0-3-amd64.
+###########################################
+
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n95_des.plt
+create_plot -1d
+select_plots Plot_1
+#-> Plot_1
+#-> Plot_1
+#-> n95_des
+create_curve -plot Plot_1 -dataset n95_des -axisX {electrode_2 OuterVoltage} -axisY {electrode_2 TotalCurrent}
+#-> Curve_1

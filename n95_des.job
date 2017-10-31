@@ -14,7 +14,7 @@
 
 gjob is running on host 'ug179.eecg.toronto.edu' by user 'wangj261'
 Binary 'gjob'
-Command line options '-verbose -nice 19 -job 95 -swb_pid 15434 -gsub_pid 14328 -gsub_host ug179.eecg.toronto.edu -gsub_port 45503 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
+Command line options '-verbose -nice 19 -job 95 -swb_pid 15434 -gsub_pid 4767 -gsub_host ug179.eecg.toronto.edu -gsub_port 37053 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
 Current directory '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
 Some relevant environment variables:
 	STROOT=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/..
@@ -53,11 +53,11 @@ Preprocessing file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sdevice.
 +++Preprocessing results written to /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/pp95_des.par
 The node '95' has dependencies to the node(s) '98'
 Start Simulation section
-00:10:35 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
-00:11:20 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
+01:55:54 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:56:36 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
 End Simulation section
 Start Epilogue section
-00:11:20 Oct 31 2017 *** job 95 pre/post execution: eval " gjob::find_extracted_vars "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1" n95_des.out 95; waiting "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1" 95 des "
+01:56:36 Oct 31 2017 *** job 95 pre/post execution: eval " gjob::find_extracted_vars "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1" n95_des.out 95; waiting "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1" 95 des "
 End Epilogue section
 Job succeeded
 gjob exits with status 0

@@ -114,3 +114,61 @@
 00:10:35 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
 00:11:21 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
 00:11:23 Oct 31 2017 <Project1> done (49 sec)
+01:15:22 Oct 31 2017 <Project1> submitted to the batch system
+01:15:23 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:16:08 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
+01:16:10 Oct 31 2017 <Project1> done (48 sec)
+01:16:16 Oct 31 2017 <Project1> submitted to the batch system
+01:16:18 Oct 31 2017 <Project1> done (2 sec)
+01:20:47 Oct 31 2017 <Project1> submitted to the batch system
+01:20:48 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:21:33 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
+01:21:35 Oct 31 2017 <Project1> done (48 sec)
+01:21:58 Oct 31 2017 <Project1> submitted to the batch system
+01:21:59 Oct 31 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+01:22:06 Oct 31 2017 +++ job 97 <inspect> done: exit(0)
+01:22:08 Oct 31 2017 <Project1> done (10 sec)
+01:26:24 Oct 31 2017 <Project1> submitted to the batch system
+01:26:25 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:27:05 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
+01:27:07 Oct 31 2017 <Project1> done (43 sec)
+01:27:21 Oct 31 2017 <Project1> submitted to the batch system
+01:27:23 Oct 31 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+01:28:56 Oct 31 2017 +++ job 97 <inspect> done: exit(0)
+01:28:58 Oct 31 2017 <Project1> done (97 sec)
+01:32:01 Oct 31 2017 <Project1> submitted to the batch system
+01:32:02 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:32:45 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
+01:32:48 Oct 31 2017 <Project1> done (47 sec)
+01:35:38 Oct 31 2017 <Project1> submitted to the batch system
+01:35:39 Oct 31 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+01:35:44 Oct 31 2017 +++ job 97 <inspect> done: exit(0)
+01:35:46 Oct 31 2017 <Project1> done (8 sec)
+01:40:02 Oct 31 2017 <Project1> submitted to the batch system
+01:40:04 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:40:48 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
+01:40:50 Oct 31 2017 <Project1> done (48 sec)
+01:42:44 Oct 31 2017 <Project1> submitted to the batch system
+01:42:45 Oct 31 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+01:42:56 Oct 31 2017 +++ job 97 <inspect> done: exit(0)
+01:42:58 Oct 31 2017 <Project1> done (14 sec)
+01:44:27 Oct 31 2017 <Project1> submitted to the batch system
+01:44:28 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:45:03 Oct 31 2017 --- job 95 <sdevice> exited abnormally: exit()
+01:45:05 Oct 31 2017 <Project1> failed
+01:48:52 Oct 31 2017 <Project1> submitted to the batch system
+01:48:53 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:49:37 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
+01:49:39 Oct 31 2017 <Project1> done (47 sec)
+01:51:55 Oct 31 2017 <Project1> submitted to the batch system
+01:51:56 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:52:31 Oct 31 2017 --- job 95 <sdevice> exited abnormally: exit()
+01:52:33 Oct 31 2017 <Project1> failed
+01:55:52 Oct 31 2017 <Project1> submitted to the batch system
+01:55:54 Oct 31 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+01:56:36 Oct 31 2017 +++ job 95 <sdevice> done: exit(0)
+01:56:39 Oct 31 2017 <Project1> done (47 sec)
+01:57:33 Oct 31 2017 <Project1> submitted to the batch system
+01:57:34 Oct 31 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+01:57:45 Oct 31 2017 +++ job 97 <inspect> done: exit(0)
+01:57:47 Oct 31 2017 <Project1> done (14 sec)

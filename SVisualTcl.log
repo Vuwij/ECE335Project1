@@ -2,7 +2,7 @@
 # Sentaurus Visual L-2016.03.
 # Tcl log file.
 #------------------------------------------
-# Date: Oct 31, 2017. 00:11:52.
+# Date: Oct 31, 2017. 01:58:28.
 # Version: 25.0.10 (1.10)
 # Mode: Interactive (GUI).
 # Hostname: ug179.
@@ -18,39 +18,27 @@ select_plots Plot_1
 #-> n95_des
 create_curve -plot Plot_1 -dataset n95_des -axisX {electrode_2 TotalCurrent} -axisY {electrode_2 TotalCurrent}
 #-> Curve_1
-create_curve -plot Plot_1 -dataset n95_des -axisX {electrode_2 TotalCurrent} -axisY {electrode_2 TotalCurrent}
-#-> Curve_2
 remove_curves -plot Plot_1 Curve_1
 #-> Curve_1
-remove_curves -plot Plot_1 Curve_2
-#-> Curve_2
 create_curve -plot Plot_1 -dataset n95_des -axisX {electrode_2 OuterVoltage} -axisY {electrode_2 TotalCurrent}
 #-> Curve_1
-set_legend_prop -plot Plot_1 -position {0.110805 0.914984}
+set_plot_prop -plot Plot_1 -show_grid
 #-> 0
-set_legend_prop -plot Plot_1 -position {0.113558 0.925611}
+set_axis_prop -plot Plot_1 -axis y -title "Current (Negative Bias)"
 #-> 0
-move_plot -plot Plot_1 -position {0 0}
+set_axis_prop -plot Plot_1 -axis y -title "Current (Negative Bias) (A)"
 #-> 0
-set_plot_prop -plot Plot_1 -title "Reverse Bias at 600K"
+set_axis_prop -plot Plot_1 -axis y -title "Current (Negative Bias) (A)"
 #-> 0
-set_axis_prop -plot Plot_1 -axis y -title Current
-#-> 0
-set_axis_prop -plot Plot_1 -axis y -title "Current (A)"
-#-> 0
-set_axis_prop -plot Plot_1 -axis y -title "Current (A)"
+set_axis_prop -plot Plot_1 -axis x -title Voltage
 #-> 0
 set_axis_prop -plot Plot_1 -axis x -title "Voltage (V)"
 #-> 0
-set_curve_prop -plot Plot_1 Curve_1 -label "Total Current (A)"
+set_plot_prop -plot Plot_1 -title "Reverse Bias"
+#-> 0
+set_curve_prop -plot Plot_1 Curve_1 -label "Total Current"
 #-> 0
 set_curve_prop -plot Plot_1 Curve_1 -label "Total Current (A)"
 #-> 0
-set_curve_prop -plot Plot_1 Curve_1 -label "Total Current (A)"
-#-> 0
-set_curve_prop -plot Plot_1 Curve_1 -label "Total Current (A)"
-#-> 0
-set_curve_prop -plot Plot_1 Curve_1 -label "Total Current (A)"
-#-> 0
-export_view /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/plots/4a.png -plots Plot_1 -format png -resolution 800x400 -overwrite
+export_view /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/plots/4b.png -plots Plot_1 -format png -resolution 800x400 -overwrite
 #-> 0
