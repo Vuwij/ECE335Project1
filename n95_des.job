@@ -12,9 +12,9 @@
 ***  license agreement between you, or your company, and Synopsys, Inc.  ***
 ****************************************************************************
 
-gjob is running on host 'ug132.eecg.toronto.edu' by user 'wangj261'
+gjob is running on host 'ug179.eecg.toronto.edu' by user 'wangj261'
 Binary 'gjob'
-Command line options '-verbose -nice 19 -job 95 -swb_pid 12055 -gsub_pid 12375 -gsub_host ug132.eecg.toronto.edu -gsub_port 38243 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
+Command line options '-verbose -nice 19 -job 95 -swb_pid 15434 -gsub_pid 24960 -gsub_host ug179.eecg.toronto.edu -gsub_port 34965 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
 Current directory '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
 Some relevant environment variables:
 	STROOT=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/..
@@ -22,7 +22,7 @@ Some relevant environment variables:
 	STROOT_LIB=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib
 	STDB=/homes/w/wangj261/SentaurusDB
 	DATEX=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/datexcodes.txt
-	DISPLAY=:99
+	DISPLAY=:0
 
 Project '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
 Loading global tool database '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/glib2/tooldb.tcl'
@@ -53,11 +53,11 @@ Preprocessing file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/sdevice.
 +++Preprocessing results written to /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/pp95_des.par
 The node '95' has dependencies to the node(s) '98'
 Start Simulation section
-02:31:58 Oct 30 2017     job 95 <sdevice> started on host 'ug132.eecg.toronto.edu': "sdevice pp95_des.cmd"
-02:31:59 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
+23:28:51 Oct 30 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+23:28:53 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
 End Simulation section
 Start Epilogue section
-02:31:59 Oct 30 2017 *** job 95 pre/post execution: eval " gjob::find_extracted_vars "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1" n95_des.out 95; waiting "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1" 95 des "
+23:28:53 Oct 30 2017 *** job 95 pre/post execution: eval " gjob::find_extracted_vars "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1" n95_des.out 95; waiting "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1" 95 des "
 End Epilogue section
 Job succeeded
 gjob exits with status 0

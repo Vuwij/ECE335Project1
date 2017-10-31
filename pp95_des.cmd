@@ -21,7 +21,7 @@ Electrode {
 }
 
 Physics {
-   Temperature=600
+   Temperature=300
    EffectiveIntrinsicDensity( Slotboom )
    Mobility ( DopingDep eHighFieldSaturation hHighFieldSaturation )
    Recombination(SRH(DopingDep) Auger Avalanche(ElectricField))
@@ -38,9 +38,9 @@ Solve{
   NewCurrentFile=""
   Coupled (Iterations=100) { poisson electron hole  }
 
-  Quasistationary ( InitialStep=4e-2 Increment=1.1 Minstep=1e-10 MaxStep=1e-1
+  Quasistationary ( InitialStep=4e-3 Increment=1.1 Minstep=1e-4 MaxStep=1e-2
      Goal {
-         Name="electrode_2" Voltage=-10
+         Name="electrode_2" Voltage=-90
       }
     ) { Coupled (Iterations=100) {Poisson Electron Hole}}
 

@@ -3,9 +3,9 @@ Project Summary for /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Project Details :
 		current status		: running
-		was last modified	: 10/30/2017 02:33:08
+		was last modified	: 10/30/2017 23:29:22
 		was modified by		: wangj261
-		was run on host		: ug132.eecg.toronto.edu
+		was run on host		: ug179.eecg.toronto.edu
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Total Number of Nodes			: 5
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -28,14 +28,14 @@ Hosts and Execution Information
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  
  
-Host "ug132.eecg.toronto.edu" 
+Host "ug179.eecg.toronto.edu" 
 		Number of nodes		: 3
-		Host Time		: 62 sec
+		Host Time		: 36 sec
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-		Total RunTime		: 62 sec
+		Total RunTime		: 36 sec
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Project Summary generated on		: 10/30/2017 02:34:07
+Project Summary generated on		: 10/30/2017 23:29:44
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

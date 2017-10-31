@@ -2,24 +2,54 @@
 # Sentaurus Visual L-2016.03.
 # Tcl log file.
 #------------------------------------------
-# Date: Oct 30, 2017. 00:13:04.
+# Date: Oct 30, 2017. 22:59:36.
 # Version: 25.0.10 (1.10)
 # Mode: Interactive (GUI).
-# Hostname: ug132.
+# Hostname: ug179.
 # Machine: Linux, x86_64, x86_64.
 # Kernel: 4.9.0-3-amd64.
 ###########################################
 
-load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n98_bnd.tdr
-create_plot -dataset n98_bnd
-select_plots Plot_n98_bnd
-#-> Plot_n98_bnd
-#-> Plot_n98_bnd
-#-> n98_bnd
-load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n98_msh.tdr
-create_plot -dataset n98_msh
-select_plots Plot_n98_msh
-#-> Plot_n98_msh
-#-> Plot_n98_msh
-#-> n98_msh
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n95_des.plt
+create_plot -1d
+select_plots Plot_1
+#-> Plot_1
+#-> Plot_1
+#-> n95_des
+create_curve -plot Plot_1 -dataset n95_des -axisX {electrode_2 OuterVoltage} -axisY {electrode_2 TotalCurrent}
+#-> Curve_1
+set_axis_prop -plot Plot_1 -axis y -title "I (mA)"
+#-> 0
+set_axis_prop -plot Plot_1 -axis y -title "I (mA)"
+#-> 0
+set_axis_prop -plot Plot_1 -axis y -scale_format scientific
+#-> 0
+set_axis_prop -plot Plot_1 -axis y -scale_format preferred
+#-> 0
+set_axis_prop -plot Plot_1 -axis x -title "Voltage (V)"
+#-> 0
+set_axis_prop -plot Plot_1 -axis x -title "Voltage (V)"
+#-> 0
+set_axis_prop -plot Plot_1 -axis x -title "Voltage (V)"
+#-> 0
+set_legend_prop -plot Plot_1 -position {0.112182 0.919235}
+#-> 0
+move_plot -plot Plot_1 -position {0 0}
+#-> 0
+set_plot_prop -plot Plot_1 -title Plot_1
+#-> 0
+set_plot_prop -plot Plot_1 -title "Reverse Bias"
+#-> 0
+set_plot_prop -plot Plot_1 -title "Reverse Bias"
+#-> 0
+set_curve_prop -plot Plot_1 Curve_1 -label "Electrode 2 Current (mA)"
+#-> 0
+set_axis_prop -plot Plot_1 -axis y -title "I (mA)"
+#-> 0
+set_axis_prop -plot Plot_1 -axis y -title "I (mA)"
+#-> 0
+set_axis_prop -plot Plot_1 -axis y -title "I (mA)"
+#-> 0
+export_view /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/plots/2a.png -plots Plot_1 -format png -resolution 800x400 -overwrite
+#-> 0
 exit 0

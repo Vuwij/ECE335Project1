@@ -14,3 +14,79 @@
 02:24:33 Oct 30 2017     job 8 <sde> started on host 'ug132.eecg.toronto.edu': "sde -e -l n8_dvs.cmd"
 02:24:36 Oct 30 2017 +++ job 8 <sde> done: exit(0)
 02:24:38 Oct 30 2017 <Project0> done (6 sec)
+22:10:14 Oct 30 2017 <Project1> submitted to the batch system
+22:10:15 Oct 30 2017     job 98 <sde> started on host 'ug179.eecg.toronto.edu': "sde -e -l n98_dvs.cmd"
+22:10:32 Oct 30 2017 +++ job 98 <sde> done: exit(0)
+22:10:34 Oct 30 2017 <Project1> done (20 sec)
+22:10:46 Oct 30 2017 <Project1> submitted to the batch system
+22:10:47 Oct 30 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+22:11:30 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
+22:11:32 Oct 30 2017 <Project1> done (46 sec)
+22:11:56 Oct 30 2017 <Project1> submitted to the batch system
+22:11:58 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+22:16:01 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+22:16:03 Oct 30 2017 <Project1> done (247 sec)
+22:16:33 Oct 30 2017 <Project1> submitted to the batch system
+22:16:35 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+22:33:01 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+22:33:08 Oct 30 2017 <Project1> done (995 sec)
+22:33:19 Oct 30 2017 <Project1> submitted to the batch system
+22:33:20 Oct 30 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+22:33:23 Oct 30 2017 --- job 95 <sdevice> exited abnormally: exit()
+22:33:25 Oct 30 2017 <Project1> failed
+22:34:57 Oct 30 2017 <Project1> submitted to the batch system
+22:34:58 Oct 30 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+22:35:37 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
+22:35:39 Oct 30 2017 <Project1> done (42 sec)
+22:36:50 Oct 30 2017 <Project1> submitted to the batch system
+22:36:51 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+22:38:01 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+22:38:03 Oct 30 2017 <Project1> done (73 sec)
+22:38:17 Oct 30 2017 <Project1> submitted to the batch system
+22:38:18 Oct 30 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+22:38:59 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
+22:39:01 Oct 30 2017 <Project1> done (44 sec)
+22:48:58 Oct 30 2017 <Project1> submitted to the batch system
+22:48:59 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+22:51:14 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+22:51:16 Oct 30 2017 <Project1> done (138 sec)
+22:55:44 Oct 30 2017 <Project1> submitted to the batch system
+22:55:45 Oct 30 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+22:55:48 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
+22:55:50 Oct 30 2017 <Project1> done (6 sec)
+22:57:37 Oct 30 2017 <Project1> submitted to the batch system
+22:57:39 Oct 30 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+22:58:23 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
+22:58:24 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+22:58:56 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+22:58:58 Oct 30 2017 <Project1> done (81 sec)
+22:59:07 Oct 30 2017 <Project1> submitted to the batch system
+22:59:08 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -batch -f pp97_ins.cmd"
+22:59:10 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+22:59:13 Oct 30 2017 <Project1> done (6 sec)
+23:26:35 Oct 30 2017 <Project1> submitted to the batch system
+23:26:36 Oct 30 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+23:26:40 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
+23:26:42 Oct 30 2017 <Project1> done (7 sec)
+23:27:00 Oct 30 2017 <Project1> submitted to the batch system
+23:27:01 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -batch -f pp97_ins.cmd"
+23:27:03 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+23:27:05 Oct 30 2017 <Project1> done (5 sec)
+23:27:21 Oct 30 2017 <Project1> submitted to the batch system
+23:27:22 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -batch -f pp97_ins.cmd"
+23:27:24 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+23:27:26 Oct 30 2017 <Project1> done (5 sec)
+23:27:39 Oct 30 2017 <Project1> submitted to the batch system
+23:27:40 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+23:28:32 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+23:28:34 Oct 30 2017 <Project1> done (55 sec)
+23:28:49 Oct 30 2017 <Project1> submitted to the batch system
+23:28:50 Oct 30 2017     job 95 <sdevice> started on host 'ug179.eecg.toronto.edu': "sdevice pp95_des.cmd"
+23:28:54 Oct 30 2017 +++ job 95 <sdevice> done: exit(0)
+23:28:56 Oct 30 2017 <Project1> done (7 sec)
+23:29:02 Oct 30 2017 <Project1> submitted to the batch system
+23:29:04 Oct 30 2017 <Project1> done (2 sec)
+23:29:21 Oct 30 2017 <Project1> submitted to the batch system
+23:29:22 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+23:29:42 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+23:29:44 Oct 30 2017 <Project1> done (23 sec)

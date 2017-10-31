@@ -12,23 +12,23 @@
 ***  license agreement between you, or your company, and Synopsys, Inc.  ***
 ****************************************************************************
 
-gsub is running on host 'ug132.eecg.toronto.edu' by user 'wangj261'
+gsub is running on host 'ug179.eecg.toronto.edu' by user 'wangj261'
 Binary 'gsub'
-Command line options '-verbose -swb_pid 12055 -q local:default -e 97 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
-Current directory '/homes/w/wangj261'
+Command line options '-verbose -swb_pid 15434 -q local:default -e 97 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
+Current directory '/homes/w/wangj261/Documents/ECE335'
 Some relevant environment variables:
 	STROOT=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/..
 	STRELEASE=current
 	STROOT_LIB=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib
 	STDB=/homes/w/wangj261/SentaurusDB
 	DATEX=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/datexcodes.txt
-	DISPLAY=:99
+	DISPLAY=:0
 
 Starting swblm daemon...OK
 Project '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1'
 Loading global tool database '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/glib2/tooldb.tcl'
 Loading project tool database '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gtooldb.tcl'
-02:33:07 Oct 30 2017 <Project1> submitted to the batch system
+23:29:21 Oct 30 2017 <Project1> submitted to the batch system
 Loading global queue configuration file '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../queues/gqueues.dat'...ok
 Loading project tree '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/gtree.dat'
 >>>>> Preprocessing the project to run in normal mode
@@ -75,15 +75,15 @@ local% initialize 'local' scheduler data
 >>>>>>>>>> os_rm /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1/n97_ins.job
 local% submit job 97 for local execution
 >>>>>>>>>> job '97' status changed from 'ready' to 'pending'
-local% exec "/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../bin/gjob -verbose -nice 19  -job 97 -swb_pid 12055 -gsub_pid 12543 -gsub_host ug132.eecg.toronto.edu -gsub_port 39939 "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1""
+local% exec "/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../bin/gjob -verbose -nice 19  -job 97 -swb_pid 15434 -gsub_pid 25359 -gsub_host ug179.eecg.toronto.edu -gsub_port 41539 "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project1""
 >>>>>>>>>> job '97' status changed from 'pending' to 'running'
-02:33:08 Oct 30 2017     job 97 <inspect> started on host 'ug132.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
+23:29:22 Oct 30 2017     job 97 <inspect> started on host 'ug179.eecg.toronto.edu': "inspect -f pp97_ins.cmd"
 >>>>>>>>>> job '97' status changed from 'running' to 'done'
-02:34:05 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
+23:29:42 Oct 30 2017 +++ job 97 <inspect> done: exit(0)
 
 SCHEDULING REPORT
 +++ done     : 97
 
-02:34:07 Oct 30 2017 <Project1> done (60 sec)
->>>>>> Writing to status file 60
+23:29:44 Oct 30 2017 <Project1> done (23 sec)
+>>>>>> Writing to status file 23
 gsub exits with status 0

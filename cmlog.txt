@@ -1,5 +1,5 @@
-DATE: 10/30/17 - 10/30/17 cmlog.txt
+DATE: 10/31/17 - 10/31/17 cmlog.txt
 
 This localhost (server) information:
-	Name:    ug132.eecg.toronto.edu
-	Address: 128.100.13.132
+	Name:    ug179.eecg.toronto.edu
+	Address: 128.100.13.179
