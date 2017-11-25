@@ -1,0 +1,287 @@
+****************************************************************************
+***                      Sentaurus Structure Editor                      ***
+***                          Version L-2016.03                           ***
+***                         (1.4, x86_64, Linux)                         ***
+***                                                                      ***
+***               Copyright (C) 1994-2016 Synopsys, Inc.                 ***
+***        Portions of this software are owned by Spatial Corp.          ***
+***            Copyright (C) 1986-2016. All Rights Reserved.             ***
+***                                                                      ***
+***  This software and the associated documentation are confidential     ***
+***  and proprietary to Synopsys, Inc.  Your use or disclosure of this   ***
+***  software is subject to the terms and conditions of a written        ***
+***  license agreement between you, or your company, and Synopsys, Inc.  ***
+****************************************************************************
+
+Compiled Sat Jan 23 07:14:32 PST 2016 on tcadbld1
+
+Machine type information not available.
+
+version #3 done.
+Evaluating file n3_dvs.cmd
+
+---> (if (string=? nMOS nMOS) (begin (define DopSub BoronActiveConcentration) (define DopSD ArsenicActiveConcentration) (define SubDop 1e+17) (define HaloDop 1.5e+18) (define ExtDop 1e+19)))
+
+---> (define Lg 0.045)
+
+---> (define Lsp 0.1)
+
+---> (define Lreox 0.007)
+
+---> (define Ltot (+ Lg (* 2 Lsp) 0.8))
+
+---> (define Hsub 1.0)
+
+---> (define Tox 0.0014)
+
+---> (define Hpol 0.2)
+
+---> (define fillet-radius 0.08)
+
+---> (define Gpn 0.002)
+
+---> (define XjHalo 0.07)
+
+---> (define XjExt 0.026)
+
+---> (define XjSD 0.12)
+
+---> (define Xmax (/ Ltot 2.0))
+
+---> (define Xg (/ Lg 2.0))
+
+---> (define Xsp (+ Xg Lsp))
+
+---> (define Xrox (+ Xg Lreox))
+
+---> (define Ysub Hsub)
+
+---> (define Ygox (* Tox -1.0))
+
+---> (define Ypol (- Ygox Hpol))
+
+---> (define Lcont (- Xmax Xsp))
+
+---> (sdegeo:set-default-boolean ABA)
+
+---> (sdegeo:create-rectangle (position 0.0 Ysub 0.0) (position Xmax 0.0 0.0) Silicon R.Substrate)
+
+---> (sdegeo:create-rectangle (position 0.0 0.0 0.0) (position Xsp Ygox 0.0) SiO2 R.Gateox)
+
+---> (sdegeo:create-rectangle (position 0.0 Ygox 0.0) (position Xsp Ypol 0.0) Oxide R.PolyReox)
+
+---> (sdegeo:create-rectangle (position (+ Xg Lreox) Ygox 0.0) (position Xsp Ypol 0.0) Si3N4 R.Spacer)
+
+---> (sdegeo:create-rectangle (position 0.0 Ygox 0.0) (position Xg Ypol 0.0) PolySi R.Polygate)
+
+---> (sdegeo:fillet-2d (find-vertex-id (position Xsp Ypol 0.0)) fillet-radius)
+
+shortest edge: 0.093000
+---> (sdegeo:define-contact-set drain 4.0 (color:rgb 0.0 1.0 0.0) ##)
+
+---> (sdegeo:define-contact-set gate 4.0 (color:rgb 0.0 0.0 1.0) ##)
+
+---> (sdegeo:define-contact-set substrate 4.0 (color:rgb 0.0 1.0 1.0) ##)
+
+---> (sdegeo:define-2d-contact (find-edge-id (position (* (+ Xmax Xsp) 0.5) 0.0 0.0)) drain)
+
+---> (sdegeo:define-2d-contact (find-edge-id (position 0.0005 Ypol 0.0)) gate)
+
+---> (sdegeo:define-2d-contact (find-edge-id (position 0.0005 Ysub 0.0)) substrate)
+
+---> (sde:separate-lumps)
+
+---> (sde:addmaterial (find-body-id (position 0.0005 (- Ysub 0.1) 0.0)) Silicon R.Substrate)
+
+---> (sde:addmaterial (find-body-id (position 0.0005 (* 0.5 Ygox) 0.0)) SiO2 R.Gateox)
+
+---> (sde:addmaterial (find-body-id (position 0.0005 (- Ygox 0.01) 0.0)) PolySi R.Polygate)
+
+---> (sde:addmaterial (find-body-id (position (* -0.5 (+ Xsp Xg)) (- Ygox 0.01) 0.0)) Si3N4 R.Spacerleft)
+
+---> (sde:addmaterial (find-body-id (position (* 0.5 (+ Xsp Xg)) (- Ygox 0.01) 0.0)) Si3N4 R.Spacerright)
+
+---> (sdedr:define-constant-profile Const.Substrate DopSub SubDop)
+
+---> (sdedr:define-constant-profile-region PlaceCD.Substrate Const.Substrate R.Substrate)
+
+---> (sdedr:define-constant-profile Const.Gate DopSD 1e+20)
+
+---> (sdedr:define-constant-profile-region PlaceCD.Gate Const.Gate R.Polygate)
+
+---> (sdedr:define-refinement-window BaseLine.Halo Line (position Xg 0.0 0.0) (position (* Xmax 2.0) 0.0 0.0))
+
+---> (sdedr:define-gaussian-profile Impl.Haloprof DopSub PeakPos 0 PeakVal HaloDop ValueAtDepth (* 0.1 HaloDop) Depth XjHalo Gauss Factor 1.0)
+
+---> (sdedr:define-analytical-profile-placement Impl.Halo Impl.Haloprof BaseLine.Halo Positive NoReplace Eval)
+
+---> (sdedr:define-refinement-window BaseLine.Ext Line (position Xrox 0.0 0.0) (position (* Xmax 2.0) 0.0 0.0))
+
+---> (sdedr:define-gaussian-profile Impl.Extprof DopSD PeakPos 0 PeakVal ExtDop ValueAtDepth SubDop Depth XjExt Gauss Factor 0.8)
+
+---> (sdedr:define-analytical-profile-placement Impl.Ext Impl.Extprof BaseLine.Ext Positive NoReplace Eval)
+
+---> (sdedr:define-refinement-window BaseLine.SD Line (position Xsp 0.0 0.0) (position (* Xmax 2.0) 0.0 0.0))
+
+---> (sdedr:define-gaussian-profile Impl.SDprof DopSD PeakPos 0 PeakVal 1e+20 ValueAtDepth SubDop Depth XjSD Gauss Factor 0.8)
+
+---> (sdedr:define-analytical-profile-placement Impl.SD Impl.SDprof BaseLine.SD Positive NoReplace Eval)
+
+---> (sdedr:define-refinement-size Ref.Substrate (/ Xmax 4.0) (/ Hsub 8.0) Gpn Gpn)
+
+---> (sdedr:define-refinement-function Ref.Substrate DopingConcentration MaxTransDiff 1)
+
+---> (sdedr:define-refinement-region RefPlace.Substrate Ref.Substrate R.Substrate)
+
+---> (sdedr:define-refinement-window RWin.Act Rectangle (position 0.0 0.0 0.0) (position Xmax (* XjSD 1.5) 0.0))
+
+---> (sdedr:define-refinement-size Ref.SiAct (/ Lcont 4.0) (/ XjSD 6.0) Gpn Gpn)
+
+---> (sdedr:define-refinement-function Ref.SiAct DopingConcentration MaxTransDiff 1)
+
+---> (sdedr:define-refinement-placement RefPlace.SiAct Ref.SiAct RWin.Act)
+
+---> (sdedr:define-refinement-window MBWindow.Gate Rectangle (position 0.0 Ypol 0.0) (position Xg Ygox 0.0))
+
+---> (sdedr:define-multibox-size MBSize.Gate (/ Lg 8.0) (/ Hpol 4.0) (/ Lg 10.0) 0.0002 1.0 -1.35)
+
+---> (sdedr:define-multibox-placement MBPlace.Gate MBSize.Gate MBWindow.Gate)
+
+---> (sdedr:define-refinement-window MBWindow.GateOx Rectangle (position 0.0 Ygox 0.0) (position (* Xg 1.2) 0.0 0.0))
+
+---> (sdedr:define-multibox-size MBSize.GateOx (/ Lg 8.0) (/ Tox 4.0) (/ Lg 10.0) 0.0001 1.0 -1.35)
+
+---> (sdedr:define-multibox-placement MBPlace.GateOx MBSize.GateOx MBWindow.GateOx)
+
+---> (sdedr:define-refinement-size Ref.GOX (/ Ltot 4.0) (/ Tox 4.0) Gpn (/ Tox 8.0))
+
+---> (sdedr:define-refinement-region RefPlace.GOX Ref.GOX R.Gateox)
+
+---> (sdedr:define-refinement-window MBWindow.Channel Rectangle (position 0.0 0.0 0.0) (position (* Xg 1.2) (* 2.0 XjExt) 0.0))
+
+---> (sdedr:define-multibox-size MBSize.Channel (/ Lg 8.0) (/ XjSD 8.0) (/ Lg 10.0) 0.0001 1.0 1.35)
+
+---> (sdedr:define-multibox-placement MBPlace.Channel MBSize.Channel MBWindow.Channel)
+
+---> (sdedr:define-refinement-size Ref.J (/ XjExt 8.0) (/ XjExt 8.0) (/ XjExt 10.0) (/ XjExt 10.0))
+
+---> (sdedr:define-refinement-window RWin.GD Rectangle (position (- Xrox (* 0.8 XjExt)) 0.0 0.0) (position (- Xrox (* 0.1 XjExt)) (* XjExt 0.5) 0.0))
+
+---> (sdedr:define-refinement-placement RefPlace.GJ Ref.J RWin.GD)
+
+---> (sde:build-mesh snmesh   n3_half_msh)
+
+****************************************************************************
+***                            Sentaurus Mesh                            ***
+***                          Version L-2016.03                           ***
+***                         (1.8, x86_64, Linux)                         ***
+***                                                                      ***
+***                       Copyright (C) 2005-2016                        ***
+***                            Synopsys, Inc.                          ***
+***                                                                      ***
+***  This software and the associated documentation are confidential     ***
+***  and proprietary to Synopsys, Inc.  Your use or disclosure of this   ***
+***  software is subject to the terms and conditions of a written        ***
+***  license agreement between you, or your company, and Synopsys, Inc.  ***
+****************************************************************************
+
+Compiled Thu Jan 21 14:33:33 PST 2016 on: tcadbld1
+Running on: ug132
+Hardware type: x86_64
+OS name: Linux
+OS release: 4.9.0-3-amd64
+OS version: #1 SMP Debian 4.9.30-2+deb9u5 (2017-09-19)
+Process ID: 27745
+
+Flags used:
+
+** Generating 2d grid **
+
+Creating binary tree...done.
+Imprinting binary tree on the boundary...done.
+Optimizing boundary nodes...done.
+
+Number of vertices after binary tree generation : 
+  1960 (tree) + 279 (boundary)
+
+
+=================================  brep2d quality  =====================================
+minAngle: 90  [near (-0 -0)] at region=R.Gateox
+nVerts = 279  nTris = 283  nRegs = 8
+bmin: -0 -0.2014
+bmax: 0.5225 1
+min area: 3.10181e-05  max area: 0.130625  total area  : 4.05811 interface area: 0.645
+total volume: 0.545741
+Conformal? true
+Are all boundaries on bbox? false
+==================================================================================
+** Delaunizing the mesh **
+
+Creating delaunizer input...done.
+Solving edges...done 
+Optimizing elements...done. (2216 vertices)
+Fixing diagonals...done.
+
+The final mesh has: 
+    2178 points.
+    4174 elements.
+       8 regions.
+Max. connectivity = 9 located at (0.0408203;0.09895)
+
+
+==============================  tri-grid quality  ================================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    8   5   5   7   8   9   8   6   6  40  .   .   .   .   .             
+---------------------------------------------------------------------------------
+minAngle: 0.0882701  maxAngle: 141.724
+nVerts = 2178  nTris = 4174  nMats = 5
+max connectivity (tris per node): 9
+bmin: -0 -0.2014
+bmax: 0.5225 1
+min edgeLength: 3.10181e-05  [near (0.0285742 1.5509e-05)]
+min volume: 9.2268e-10  max volume: 0.00490415  Total volume: 0.545741
+bbox  volume: 0.627731
+Are all boundaries on bbox? false
+=================================================================================
+Interpolating data...done.
+done.
+Saving file n3_half_msh.tdr...done.
+
+===============================  Timer Report===================================
+              Total Mesh Generation Time:     0.138s       100%
+                       Rate of #Vertices:  1.57e+04
+                          Rate of #Edges:  2.88e+04
+                          Rate of #Faces:  3.02e+04
+                       Rate of #Elements:         0
+
+                            Time Covered:         0s         0%
+
+
+"Meshing successful"
+---> (system:command tdx -mtt -x -ren drain=source n3_half_msh n3_msh)
+
+
+****************************************************************************
+***                  Sentaurus Workbench Visualization                   ***
+***                          Version L-2016.03                           ***
+***                         (1.1, x86_64, Linux)                         ***
+***                                                                      ***
+***                Copyright (c) 1994-2016 Synopsys, Inc.                ***
+***                                                                      ***
+***  This software and the associated documentation are confidential     ***
+***  and proprietary to Synopsys, Inc.  Your use or disclosure of this   ***
+***  software is subject to the terms and conditions of a written        ***
+***  license agreement between you, or your company, and Synopsys, Inc.  ***
+****************************************************************************
+Rename list: drain=source
+Start mirroring n3_half_msh.tdr to n3_msh.tdr at x
+TDR mirroring finished
+---> #[end-of-file]
+
+"************************************************************************"
+"Sentaurus Structure Editor "
+"Start Time:    Sun Oct 29 03:48:22 2017"
+"End   Time:    Sun Oct 29 03:48:24 2017"
+"Total Execution Time (sec):    1"
+"Total System calls Time (sec): 1"
+"************************************************************************"

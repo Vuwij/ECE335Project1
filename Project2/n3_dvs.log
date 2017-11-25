@@ -1,0 +1,161 @@
+Evaluating file n3_dvs.cmd
+---> (if (string=? nMOS nMOS) (begin (define DopSub BoronActiveConcentration) (define DopSD ArsenicActiveConcentration) (define SubDop 1e+17) (define HaloDop 1.5e+18) (define ExtDop 1e+19)))
+ExtDop
+---> (define Lg 0.045)
+Lg
+---> (define Lsp 0.1)
+Lsp
+---> (define Lreox 0.007)
+Lreox
+---> (define Ltot (+ Lg (* 2 Lsp) 0.8))
+Ltot
+---> (define Hsub 1.0)
+Hsub
+---> (define Tox 0.0014)
+Tox
+---> (define Hpol 0.2)
+Hpol
+---> (define fillet-radius 0.08)
+fillet-radius
+---> (define Gpn 0.002)
+Gpn
+---> (define XjHalo 0.07)
+XjHalo
+---> (define XjExt 0.026)
+XjExt
+---> (define XjSD 0.12)
+XjSD
+---> (define Xmax (/ Ltot 2.0))
+Xmax
+---> (define Xg (/ Lg 2.0))
+Xg
+---> (define Xsp (+ Xg Lsp))
+Xsp
+---> (define Xrox (+ Xg Lreox))
+Xrox
+---> (define Ysub Hsub)
+Ysub
+---> (define Ygox (* Tox -1.0))
+Ygox
+---> (define Ypol (- Ygox Hpol))
+Ypol
+---> (define Lcont (- Xmax Xsp))
+Lcont
+---> (sdegeo:set-default-boolean ABA)
+"ABA"
+---> (sdegeo:create-rectangle (position 0.0 Ysub 0.0) (position Xmax 0.0 0.0) Silicon R.Substrate)
+#[body 5 1]
+---> (sdegeo:create-rectangle (position 0.0 0.0 0.0) (position Xsp Ygox 0.0) SiO2 R.Gateox)
+#[body 6 1]
+---> (sdegeo:create-rectangle (position 0.0 Ygox 0.0) (position Xsp Ypol 0.0) Oxide R.PolyReox)
+#[body 7 1]
+---> (sdegeo:create-rectangle (position (+ Xg Lreox) Ygox 0.0) (position Xsp Ypol 0.0) Si3N4 R.Spacer)
+#[body 8 1]
+---> (sdegeo:create-rectangle (position 0.0 Ygox 0.0) (position Xg Ypol 0.0) PolySi R.Polygate)
+#[body 9 1]
+---> (sdegeo:fillet-2d (find-vertex-id (position Xsp Ypol 0.0)) fillet-radius)
+(#[body 39 1])
+---> (sdegeo:define-contact-set drain 4.0 (color:rgb 0.0 1.0 0.0) ##)
+()
+---> (sdegeo:define-contact-set gate 4.0 (color:rgb 0.0 0.0 1.0) ##)
+()
+---> (sdegeo:define-contact-set substrate 4.0 (color:rgb 0.0 1.0 1.0) ##)
+()
+---> (sdegeo:define-2d-contact (find-edge-id (position (* (+ Xmax Xsp) 0.5) 0.0 0.0)) drain)
+()
+---> (sdegeo:define-2d-contact (find-edge-id (position 0.0005 Ypol 0.0)) gate)
+()
+---> (sdegeo:define-2d-contact (find-edge-id (position 0.0005 Ysub 0.0)) substrate)
+()
+---> (sde:separate-lumps)
+(#[body 5 1] #[body 6 1] #[body 7 1] #[body 9 1] #[body 39 1])
+---> (sde:addmaterial (find-body-id (position 0.0005 (- Ysub 0.1) 0.0)) Silicon R.Substrate)
+()
+---> (sde:addmaterial (find-body-id (position 0.0005 (* 0.5 Ygox) 0.0)) SiO2 R.Gateox)
+()
+---> (sde:addmaterial (find-body-id (position 0.0005 (- Ygox 0.01) 0.0)) PolySi R.Polygate)
+()
+---> (sde:addmaterial (find-body-id (position (* -0.5 (+ Xsp Xg)) (- Ygox 0.01) 0.0)) Si3N4 R.Spacerleft)
+()
+---> (sde:addmaterial (find-body-id (position (* 0.5 (+ Xsp Xg)) (- Ygox 0.01) 0.0)) Si3N4 R.Spacerright)
+()
+---> (sdedr:define-constant-profile Const.Substrate DopSub SubDop)
+#t
+---> (sdedr:define-constant-profile-region PlaceCD.Substrate Const.Substrate R.Substrate)
+#t
+---> (sdedr:define-constant-profile Const.Gate DopSD 1e+20)
+#t
+---> (sdedr:define-constant-profile-region PlaceCD.Gate Const.Gate R.Polygate)
+#t
+---> (sdedr:define-refinement-window BaseLine.Halo Line (position Xg 0.0 0.0) (position (* Xmax 2.0) 0.0 0.0))
+#[body 73 1]
+---> (sdedr:define-gaussian-profile Impl.Haloprof DopSub PeakPos 0 PeakVal HaloDop ValueAtDepth (* 0.1 HaloDop) Depth XjHalo Gauss Factor 1.0)
+#t
+---> (sdedr:define-analytical-profile-placement Impl.Halo Impl.Haloprof BaseLine.Halo Positive NoReplace Eval)
+#t
+---> (sdedr:define-refinement-window BaseLine.Ext Line (position Xrox 0.0 0.0) (position (* Xmax 2.0) 0.0 0.0))
+#[body 74 1]
+---> (sdedr:define-gaussian-profile Impl.Extprof DopSD PeakPos 0 PeakVal ExtDop ValueAtDepth SubDop Depth XjExt Gauss Factor 0.8)
+#t
+---> (sdedr:define-analytical-profile-placement Impl.Ext Impl.Extprof BaseLine.Ext Positive NoReplace Eval)
+#t
+---> (sdedr:define-refinement-window BaseLine.SD Line (position Xsp 0.0 0.0) (position (* Xmax 2.0) 0.0 0.0))
+#[body 75 1]
+---> (sdedr:define-gaussian-profile Impl.SDprof DopSD PeakPos 0 PeakVal 1e+20 ValueAtDepth SubDop Depth XjSD Gauss Factor 0.8)
+#t
+---> (sdedr:define-analytical-profile-placement Impl.SD Impl.SDprof BaseLine.SD Positive NoReplace Eval)
+#t
+---> (sdedr:define-refinement-size Ref.Substrate (/ Xmax 4.0) (/ Hsub 8.0) Gpn Gpn)
+#t
+---> (sdedr:define-refinement-function Ref.Substrate DopingConcentration MaxTransDiff 1)
+#t
+---> (sdedr:define-refinement-region RefPlace.Substrate Ref.Substrate R.Substrate)
+#t
+---> (sdedr:define-refinement-window RWin.Act Rectangle (position 0.0 0.0 0.0) (position Xmax (* XjSD 1.5) 0.0))
+#[body 76 1]
+---> (sdedr:define-refinement-size Ref.SiAct (/ Lcont 4.0) (/ XjSD 6.0) Gpn Gpn)
+#t
+---> (sdedr:define-refinement-function Ref.SiAct DopingConcentration MaxTransDiff 1)
+#t
+---> (sdedr:define-refinement-placement RefPlace.SiAct Ref.SiAct RWin.Act)
+#t
+---> (sdedr:define-refinement-window MBWindow.Gate Rectangle (position 0.0 Ypol 0.0) (position Xg Ygox 0.0))
+#[body 77 1]
+---> (sdedr:define-multibox-size MBSize.Gate (/ Lg 8.0) (/ Hpol 4.0) (/ Lg 10.0) 0.0002 1.0 -1.35)
+#t
+---> (sdedr:define-multibox-placement MBPlace.Gate MBSize.Gate MBWindow.Gate)
+#t
+---> (sdedr:define-refinement-window MBWindow.GateOx Rectangle (position 0.0 Ygox 0.0) (position (* Xg 1.2) 0.0 0.0))
+#[body 78 1]
+---> (sdedr:define-multibox-size MBSize.GateOx (/ Lg 8.0) (/ Tox 4.0) (/ Lg 10.0) 0.0001 1.0 -1.35)
+#t
+---> (sdedr:define-multibox-placement MBPlace.GateOx MBSize.GateOx MBWindow.GateOx)
+#t
+---> (sdedr:define-refinement-size Ref.GOX (/ Ltot 4.0) (/ Tox 4.0) Gpn (/ Tox 8.0))
+#t
+---> (sdedr:define-refinement-region RefPlace.GOX Ref.GOX R.Gateox)
+#t
+---> (sdedr:define-refinement-window MBWindow.Channel Rectangle (position 0.0 0.0 0.0) (position (* Xg 1.2) (* 2.0 XjExt) 0.0))
+#[body 79 1]
+---> (sdedr:define-multibox-size MBSize.Channel (/ Lg 8.0) (/ XjSD 8.0) (/ Lg 10.0) 0.0001 1.0 1.35)
+#t
+---> (sdedr:define-multibox-placement MBPlace.Channel MBSize.Channel MBWindow.Channel)
+#t
+---> (sdedr:define-refinement-size Ref.J (/ XjExt 8.0) (/ XjExt 8.0) (/ XjExt 10.0) (/ XjExt 10.0))
+#t
+---> (sdedr:define-refinement-window RWin.GD Rectangle (position (- Xrox (* 0.8 XjExt)) 0.0 0.0) (position (- Xrox (* 0.1 XjExt)) (* XjExt 0.5) 0.0))
+#[body 80 1]
+---> (sdedr:define-refinement-placement RefPlace.GJ Ref.J RWin.GD)
+#t
+---> (sde:build-mesh snmesh   n3_half_msh)
+#t
+---> (system:command tdx -mtt -x -ren drain=source n3_half_msh n3_msh)
+0
+---> #[end-of-file]
+"************************************************************************"
+"Sentaurus Structure Editor "
+"Start Time:    Sun Oct 29 03:48:22 2017"
+"End   Time:    Sun Oct 29 03:48:24 2017"
+"Total Execution Time (sec):    1"
+"Total System calls Time (sec): 1"
+"************************************************************************"

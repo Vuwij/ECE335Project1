@@ -1,0 +1,13 @@
+<UserPreferences>
+	<Tool Name="sedit">
+		<PrefName="Font">
+			<Key="textfont" Value="-family {fixed} -size 13 -weight normal  -slant roman -underline 0 -overstrike 0" Editable="true"></Key>
+		</PrefName>
+		<PrefName="Color">
+		</PrefName>
+		<PrefName="WB_Miscellaneous">
+			<Key="wrap" Value="none" Editable="true"></Key>
+			<Key="intend" Value="0" Editable="true"></Key>
+		</PrefName>
+	</Tool>
+</UserPreferences>

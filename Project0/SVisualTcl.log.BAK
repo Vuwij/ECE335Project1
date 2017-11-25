@@ -1,0 +1,31 @@
+###########################################
+# Sentaurus Visual H-2013.03.
+# Tcl log file.
+#------------------------------------------
+# Date: Sep 28, 2015. 12:22:48.
+# Version: 21.0.6 (1.6)
+# Mode: Interactive (GUI).
+# Mesa: enabled.
+# Hostname: ug132.eecg.
+# Machine: Linux, x86_64, amd64.
+# Kernel: 3.16.0-4-amd64.
+###########################################
+
+load_file /nfs/ug/homes-0/y/yongzhe1/SentaurusDB/ECE_335/ECE_335_project_0/n8_msh.grd
+load_file /nfs/ug/homes-0/y/yongzhe1/SentaurusDB/ECE_335/ECE_335_project_0/n95_des.plt
+create_plot -1d
+select_plots {Plot_1}
+#-> Plot_1
+#-> Plot_1
+#-> n95_des
+load_file /nfs/ug/homes-0/y/yongzhe1/SentaurusDB/ECE_335/ECE_335_project_0/n95_des.tdr
+create_plot -dataset n95_des_2
+select_plots {Plot_n95_des_2}
+#-> Plot_n95_des_2
+#-> Plot_n95_des_2
+#-> n95_des_2
+zoom_plot -factor 1.1
+zoom_plot -factor 1.1
+zoom_plot -factor 0.909091
+zoom_plot -factor 0.909091
+zoom_plot -factor 0.909091

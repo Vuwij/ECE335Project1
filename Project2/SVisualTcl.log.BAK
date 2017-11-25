@@ -1,0 +1,20 @@
+###########################################
+# Sentaurus Visual H-2013.03.
+# Tcl log file.
+#------------------------------------------
+# Date: Nov 06, 2016. 20:55:37.
+# Version: 21.0.6 (1.6)
+# Mode: Interactive (GUI).
+# Mesa: enabled.
+# Hostname: ug173.eecg.
+# Machine: Linux, x86_64, amd64.
+# Kernel: 3.16.0-4-amd64.
+###########################################
+
+load_script_file /nfs/ug/cad/cad2/ece335f/project_2/n17_vis.tcl
+cd /nfs/ug/cad/cad2/ece335f/project_2
+# ##############################
+# plotting Id-Vds curves
+# ##############################
+# Ron is 4719.207 Ohm um
+#-> 0

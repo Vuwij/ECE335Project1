@@ -1,0 +1,26 @@
+ 
+if { "nMOS"  == "nMOS" } {
+  set SIGN   1.0  
+  set DG     "eQuantumPotential"
+  set cTemp  "eTemperature"
+  set EQN0   "Poisson eQuantumPotential Electron Hole"
+  set EQNS   "Poisson eQuantumPotential Electron Hole eTemperature"
+} else {
+  set SIGN   -1.0
+  set DG     "hQuantumPotential"
+  set cTemp  "hTemperature"
+  set EQN0   "Poisson hQuantumPotential Electron Hole"
+  set EQNS   "Poisson hQuantumPotential Electron Hole hTemperature"
+}
+
+puts $cTemp
+puts $DG
+puts $DG
+puts $EQN0
+puts $EQNS
+puts [expr $SIGN*0.05]
+puts $EQNS
+puts [expr $SIGN*1]
+puts $EQNS
+
+

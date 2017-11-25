@@ -1,0 +1,71 @@
+# Copyright (C) 1994-2011 Synopsys Inc.
+# swbtree vcurrent, Sun Nov  6 20:59:15 2016
+
+# --- simulation flow
+sde sde "" {}
+sde Type "NMOS" {nMOS}
+sde lgate "0.045" {0.045}
+IdVg_lin sdevice "" {}
+IdVg_lin Vdd "1.2" {1}
+IdVg_lin Vdlin "0.05" {0.05}
+IdVg_lin IdVg_lin "1" {1}
+PlotIdVg_lin svisual "" {}
+IdVg_sat sdevice "" {}
+IdVg_sat IdVg_sat "1" {1}
+PlotIdVg_sat svisual "" {}
+IdVd sdevice "" {}
+IdVd Vgmin "0.3" {0.2}
+IdVd Vgmax "1.2" {1}
+IdVd NVg "4" {5}
+IdVd IdVd "1" {1}
+PlotIdVd svisual "" {}
+# --- variables
+# --- scenarios and parameter specs
+scenario default Type ""
+scenario default lgate ""
+scenario default Vdd ""
+scenario default Vdlin ""
+scenario default IdVg_lin ""
+scenario default IdVg_sat ""
+scenario default Vgmin ""
+scenario default Vgmax ""
+scenario default NVg ""
+scenario default IdVd ""
+scenario nMOS Type ""
+scenario nMOS lgate ""
+scenario nMOS Vdd ""
+scenario nMOS Vdlin ""
+scenario nMOS IdVg_lin ""
+scenario nMOS IdVg_sat ""
+scenario nMOS Vgmin ""
+scenario nMOS Vgmax ""
+scenario nMOS NVg ""
+scenario nMOS IdVd ""
+scenario pMOS Type ""
+scenario pMOS lgate ""
+scenario pMOS Vdd ""
+scenario pMOS Vdlin ""
+scenario pMOS IdVg_lin ""
+scenario pMOS IdVg_sat ""
+scenario pMOS Vgmin ""
+scenario pMOS Vgmax ""
+scenario pMOS NVg ""
+scenario pMOS IdVd ""
+# --- simulation tree
+0 1 0 {} {pMOS nMOS default} 0
+1 2 1 {nMOS} {pMOS nMOS default} 0
+2 3 2 {0.045} {nMOS default} 0
+3 4 3 {} {nMOS default} 0
+4 5 4 {1} {nMOS default} 0
+5 6 5 {0.05} {nMOS default} 0
+6 7 6 {1} {nMOS default} 0
+7 8 7 {} {nMOS default} 0
+8 9 8 {} {nMOS default} 0
+9 10 9 {1} {nMOS default} 0
+10 11 10 {} {nMOS default} 0
+11 12 11 {} {nMOS default} 0
+12 13 12 {0.2} {nMOS default} 0
+13 14 13 {1} {nMOS default} 0
+14 15 14 {5} {nMOS default} 0
+15 16 15 {1} {nMOS default} 0
+16 17 16 {} {nMOS default} 0

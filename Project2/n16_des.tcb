@@ -1,0 +1,51 @@
+ 
+if { "nMOS"  == "nMOS" } {
+  set SIGN   1.0  
+  set DG     "eQuantumPotential"
+  set cTemp  "eTemperature"
+  set EQN0   "Poisson eQuantumPotential Electron Hole"
+  set EQNS   "Poisson eQuantumPotential Electron Hole Temperature eTemperature"
+} else {
+  set SIGN   -1.0
+  set DG     "hQuantumPotential"
+  set cTemp  "hTemperature"
+  set EQN0   "Poisson hQuantumPotential Electron Hole"
+  set EQNS   "Poisson hQuantumPotential Electron Hole Temperature hTemperature"
+}
+
+puts $cTemp
+puts $DG
+puts $DG
+puts $EQN0
+puts $EQNS
+puts [expr $SIGN*1]
+puts $EQNS
+ 
+  set TIMES "Time=("
+  for { set i 1 } { $i < 5 } { incr i } {
+    set dV [expr (1-0.2)/(5-1.0)]
+    set Time [expr (0.2 + ($i-1)*$dV)/1]
+    append TIMES "[format %.2f ${Time}];"
+  }
+  set Time 1.0
+  append TIMES "[format %.2f ${Time}]) )"
+  puts $TIMES
+
+
+  for { set i 0 } { $i < 5 } { incr i } {
+  set Number [format "%04d" $i]
+  puts "
+    NewCurrentFile=\"IdVd_${i}_\" 
+    Load(FilePrefix=\"IdVd_n16_$Number\")
+    Quasistationary( 
+      DoZero 
+      InitialStep=1e-3 Increment=1.5 
+      MinStep=1e-5 MaxStep=0.05 
+      Goal \{ Name=\"drain\" Voltage=[expr $SIGN*1] \}
+    )\{ Coupled \{ $EQNS \}
+      CurrentPlot( Time=(Range=(0 1) Intervals=20) )
+   \}"
+  }
+
+
+

@@ -1,0 +1,85 @@
+
+****************************************************************************
+***                       Sentaurus Workbench gsub                       ***
+***                          Version L-2016.03                           ***
+***                        (1.12, x86_64, Linux)                         ***
+***                                                                      ***
+***                Copyright (c) 1994-2016 Synopsys, Inc.                ***
+***                                                                      ***
+***  This software and the associated documentation are confidential     ***
+***  and proprietary to Synopsys, Inc.  Your use or disclosure of this   ***
+***  software is subject to the terms and conditions of a written        ***
+***  license agreement between you, or your company, and Synopsys, Inc.  ***
+****************************************************************************
+
+gsub is running on host 'ug132.eecg.toronto.edu' by user 'wangj261'
+Binary 'gsub'
+Command line options '-verbose -swb_pid 11278 -q local:default -e 8 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0'
+Current directory '/homes/w/wangj261'
+Some relevant environment variables:
+	STROOT=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/..
+	STRELEASE=current
+	STROOT_LIB=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib
+	STDB=/homes/w/wangj261/SentaurusDB
+	DATEX=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/datexcodes.txt
+	DISPLAY=:99
+
+Starting swblm daemon...OK
+Project '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0'
+Loading global tool database '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/glib2/tooldb.tcl'
+Loading project tool database '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/gtooldb.tcl'
+02:24:32 Oct 30 2017 <Project0> submitted to the batch system
+Loading global queue configuration file '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../queues/gqueues.dat'...ok
+Loading project tree '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/gtree.dat'
+>>>>> Preprocessing the project to run in normal mode
+Loading jobs and dependence graph '"/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/gexec.cmd"'
+INITIALIZING PREPROCESSOR:
+Loading project tree '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/gtree.dat'
+Loading project variables '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/gvars.dat'
+--Get files to preprocess...
+--Create file handlers...
+--Read the toolflow...
+--Analyze tool-file dependencies...
+--Read all nodes to preprocess...
+--Group nodes into experiments...
+--Get all variables...
+--Get all parameters...
+PREPROCESSOR SUCCESSFULLY INITIALIZED.
+PREPROCESSING STEP 1:
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/sde_dvs.cmd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/sdevice_des.cmd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/sdevice.par
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/inspect_ins.cmd
+PREPROCESSING STEP 2:
+Preprocessing file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/sde_dvs.cmd fornode 8
++++Node successfully preprocessed+++
+Writing 'gexec.cmd'
+saving variables
+Loading jobs and dependence graph '"/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/gexec.cmd"'
+>>>>>>>>>> job '8' status changed from 'done' to 'queued'
+-----------------------------------------------------------------
+queue "local:default" - 8
+-----------------------------------------------------------------
+>>>>> cleaning the index file from previous simulations 
+                       /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/.gindex
+>>>>>>>>>> Initializing back-end schedulers...
+>>>>>>>> Loaded Schedulers are ... local
+local% initialize 'local' scheduler data
+>>>>> List of Active Schedulers : local
+<<<<<<<<<<
+>>>>>>>>>> job '8' status changed from 'queued' to 'ready'
+>>>>>>>>>> os_rm /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0/n8_dvs.job
+local% submit job 8 for local execution
+>>>>>>>>>> job '8' status changed from 'ready' to 'pending'
+local% exec "/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../bin/gjob -verbose -nice 19  -job 8 -swb_pid 11278 -gsub_pid 11374 -gsub_host ug132.eecg.toronto.edu -gsub_port 35883 "/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project0""
+>>>>>>>>>> job '8' status changed from 'pending' to 'running'
+02:24:33 Oct 30 2017     job 8 <sde> started on host 'ug132.eecg.toronto.edu': "sde -e -l n8_dvs.cmd"
+>>>>>>>>>> job '8' status changed from 'running' to 'done'
+02:24:36 Oct 30 2017 +++ job 8 <sde> done: exit(0)
+
+SCHEDULING REPORT
++++ done     : 8
+
+02:24:38 Oct 30 2017 <Project0> done (6 sec)
+>>>>>> Writing to status file 6
+gsub exits with status 0

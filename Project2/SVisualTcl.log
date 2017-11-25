@@ -1,0 +1,31 @@
+###########################################
+# Sentaurus Visual L-2016.03.
+# Tcl log file.
+#------------------------------------------
+# Date: Oct 29, 2017. 03:49:16.
+# Version: 25.0.10 (1.10)
+# Mode: Interactive (GUI).
+# Hostname: ug132.
+# Machine: Linux, x86_64, x86_64.
+# Kernel: 4.9.0-3-amd64.
+###########################################
+
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/n3_half_bnd.tdr
+create_plot -dataset n3_half_bnd
+select_plots Plot_n3_half_bnd
+#-> Plot_n3_half_bnd
+#-> Plot_n3_half_bnd
+#-> n3_half_bnd
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/n3_half_msh.tdr
+create_plot -dataset n3_half_msh
+select_plots Plot_n3_half_msh
+#-> Plot_n3_half_msh
+#-> Plot_n3_half_msh
+#-> n3_half_msh
+load_file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/n3_msh.tdr
+create_plot -dataset n3_msh
+select_plots Plot_n3_msh
+#-> Plot_n3_msh
+#-> Plot_n3_msh
+#-> n3_msh
+exit 0

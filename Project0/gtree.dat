@@ -1,0 +1,19 @@
+# Copyright (C) 1994-2011 Synopsys Inc.
+# swbtree vcurrent, Sat Oct  1 19:13:40 2016
+
+# --- simulation flow
+sde sde "" {}
+sde tncSi "5" {5}
+sdevice sdevice "" {}
+sdevice temp "300" {300}
+inspect inspect "" {}
+# --- variables
+# --- scenarios and parameter specs
+scenario default tncSi ""
+scenario default temp ""
+# --- simulation tree
+0 86 0 {} {default} 0
+1 8 86 {5} {default} 0
+2 96 8 {} {default} 0
+3 95 96 {300} {default} 0
+4 97 95 {} {default} 0

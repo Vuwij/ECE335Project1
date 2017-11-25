@@ -1,0 +1,117 @@
+18:55:27 Nov 06 2016 <project_2> submitted to the batch system
+18:55:30 Nov 06 2016     job 3 <sde> started on host 'ug230.eecg.toronto.edu': "sde -e -l n3_dvs.cmd"
+18:55:43 Nov 06 2016 +++ job 3 <sde> done: exit(0)
+18:55:45 Nov 06 2016 <project_2> done (18 sec)
+19:05:19 Nov 06 2016 <project_2> submitted to the batch system
+19:05:21 Nov 06 2016 <project_2> done (2 sec)
+19:05:47 Nov 06 2016 <project_2> submitted to the batch system
+19:05:49 Nov 06 2016 <project_2> done (2 sec)
+19:06:24 Nov 06 2016 <project_2> submitted to the batch system
+19:06:26 Nov 06 2016 <project_2> done (2 sec)
+19:06:50 Nov 06 2016 <project_2> submitted to the batch system
+19:06:50 Nov 06 2016     job 7 <sdevice> started on host 'ug230.eecg.toronto.edu': "sdevice pp7_des.cmd"
+19:08:00 Nov 06 2016 +++ job 7 <sdevice> done: exit(0)
+19:08:02 Nov 06 2016     job 10 <sdevice> started on host 'ug230.eecg.toronto.edu': "sdevice pp10_des.cmd"
+19:10:15 Nov 06 2016 +++ job 10 <sdevice> done: exit(0)
+19:10:16 Nov 06 2016     job 8 <svisual> started on host 'ug230.eecg.toronto.edu': "svisual -bx n8_vis.tcl"
+19:10:17 Nov 06 2016 --- job 8 <svisual> exited abnormally: exit()
+19:10:18 Nov 06 2016     job 11 <svisual> started on host 'ug230.eecg.toronto.edu': "svisual -bx n11_vis.tcl"
+19:10:30 Nov 06 2016 +++ job 11 <svisual> done: exit(0)
+19:10:32 Nov 06 2016 <project_2> failed
+19:14:39 Nov 06 2016 <project_2> submitted to the batch system
+19:14:40 Nov 06 2016     job 3 <sde> started on host 'ug229.eecg.toronto.edu': "sde -e -l n3_dvs.cmd"
+19:16:31 Nov 06 2016 +++ job 3 <sde> done: exit(0)
+19:16:32 Nov 06 2016     job 7 <sdevice> started on host 'ug229.eecg.toronto.edu': "sdevice pp7_des.cmd"
+19:43:13 Nov 06 2016 <project_2> aborted
+19:52:57 Nov 06 2016 <project_2> submitted to the batch system
+19:52:57 Nov 06 2016     job 3 <sde> started on host 'ug175.eecg.toronto.edu': "sde -e -l n3_dvs.cmd"
+19:53:01 Nov 06 2016 +++ job 3 <sde> done: exit(0)
+19:53:03 Nov 06 2016 <project_2> done (6 sec)
+19:53:12 Nov 06 2016 <project_2> submitted to the batch system
+19:53:13 Nov 06 2016     job 7 <sdevice> started on host 'ug175.eecg.toronto.edu': "sdevice pp7_des.cmd"
+19:54:16 Nov 06 2016 +++ job 7 <sdevice> done: exit(0)
+19:54:18 Nov 06 2016 <project_2> done (66 sec)
+19:54:53 Nov 06 2016 <project_2> submitted to the batch system
+19:54:54 Nov 06 2016     job 8 <svisual> started on host 'ug175.eecg.toronto.edu': "svisual n8_vis.tcl"
+19:55:09 Nov 06 2016 +++ job 8 <svisual> done: exit(0)
+19:55:11 Nov 06 2016 <project_2> done (18 sec)
+19:55:27 Nov 06 2016 <project_2> submitted to the batch system
+19:55:28 Nov 06 2016     job 10 <sdevice> started on host 'ug175.eecg.toronto.edu': "sdevice pp10_des.cmd"
+19:57:40 Nov 06 2016 +++ job 10 <sdevice> done: exit(0)
+19:57:42 Nov 06 2016 <project_2> done (135 sec)
+19:58:06 Nov 06 2016 <project_2> submitted to the batch system
+19:58:07 Nov 06 2016     job 11 <svisual> started on host 'ug175.eecg.toronto.edu': "svisual -bx n11_vis.tcl"
+19:58:15 Nov 06 2016 +++ job 11 <svisual> done: exit(0)
+19:58:18 Nov 06 2016 <project_2> done (12 sec)
+19:59:21 Nov 06 2016 <project_2> submitted to the batch system
+19:59:22 Nov 06 2016     job 11 <svisual> started on host 'ug175.eecg.toronto.edu': "svisual n11_vis.tcl"
+19:59:54 Nov 06 2016 +++ job 11 <svisual> done: exit(0)
+19:59:56 Nov 06 2016 <project_2> done (35 sec)
+20:00:24 Nov 06 2016 <project_2> submitted to the batch system
+20:00:24 Nov 06 2016     job 16 <sdevice> started on host 'ug175.eecg.toronto.edu': "sdevice pp16_des.cmd"
+20:08:06 Nov 06 2016 +++ job 16 <sdevice> done: exit(0)
+20:08:09 Nov 06 2016 <project_2> done (465 sec)
+20:08:27 Nov 06 2016 <project_2> submitted to the batch system
+20:08:27 Nov 06 2016     job 17 <svisual> started on host 'ug175.eecg.toronto.edu': "svisual -bx n17_vis.tcl"
+20:08:37 Nov 06 2016 +++ job 17 <svisual> done: exit(0)
+20:08:39 Nov 06 2016 <project_2> done (12 sec)
+20:09:47 Nov 06 2016 <project_2> submitted to the batch system
+20:09:48 Nov 06 2016     job 17 <svisual> started on host 'ug175.eecg.toronto.edu': "svisual n17_vis.tcl"
+20:09:49 Nov 06 2016 --- job 17 <svisual> exited abnormally: exit()
+20:09:51 Nov 06 2016 <project_2> failed
+20:10:21 Nov 06 2016 <project_2> submitted to the batch system
+20:10:22 Nov 06 2016     job 17 <svisual> started on host 'ug175.eecg.toronto.edu': "svisual n17_vis.tcl"
+20:10:23 Nov 06 2016 --- job 17 <svisual> exited abnormally: exit()
+20:10:25 Nov 06 2016 <project_2> failed
+20:11:22 Nov 06 2016 <project_2> submitted to the batch system
+20:11:23 Nov 06 2016     job 17 <svisual> started on host 'ug175.eecg.toronto.edu': "svisual -bx n17_vis.tcl"
+20:11:28 Nov 06 2016 +++ job 17 <svisual> done: exit(0)
+20:11:30 Nov 06 2016 <project_2> done (8 sec)
+20:18:40 Nov 06 2016 <project_2> submitted to the batch system
+20:18:40 Nov 06 2016     job 17 <svisual> started on host 'ug174.eecg.toronto.edu': "svisual -bx n17_vis.tcl"
+20:18:50 Nov 06 2016 +++ job 17 <svisual> done: exit(0)
+20:18:53 Nov 06 2016 <project_2> done (13 sec)
+20:19:35 Nov 06 2016 <project_2> submitted to the batch system
+20:19:36 Nov 06 2016     job 17 <svisual> started on host 'ug174.eecg.toronto.edu': "svisual n17_vis.tcl"
+20:19:59 Nov 06 2016 +++ job 17 <svisual> done: exit(0)
+20:20:01 Nov 06 2016 <project_2> done (26 sec)
+20:34:48 Nov 06 2016 <project_2> submitted to the batch system
+20:34:49 Nov 06 2016     job 3 <sde> started on host 'ug174.eecg.toronto.edu': "sde -e -l n3_dvs.cmd"
+20:34:53 Nov 06 2016 +++ job 3 <sde> done: exit(0)
+20:34:55 Nov 06 2016 <project_2> done (7 sec)
+20:35:04 Nov 06 2016 <project_2> submitted to the batch system
+20:35:04 Nov 06 2016     job 7 <sdevice> started on host 'ug174.eecg.toronto.edu': "sdevice pp7_des.cmd"
+20:36:10 Nov 06 2016 +++ job 7 <sdevice> done: exit(0)
+20:36:12 Nov 06 2016 <project_2> done (68 sec)
+20:37:01 Nov 06 2016 <project_2> submitted to the batch system
+20:37:01 Nov 06 2016     job 8 <svisual> started on host 'ug174.eecg.toronto.edu': "svisual n8_vis.tcl"
+20:37:02 Nov 06 2016 --- job 8 <svisual> exited abnormally: exit()
+20:37:04 Nov 06 2016 <project_2> failed
+20:42:41 Nov 06 2016 <project_2> submitted to the batch system
+20:42:41 Nov 06 2016     job 8 <svisual> started on host 'ug173.eecg.toronto.edu': "svisual n8_vis.tcl"
+20:43:03 Nov 06 2016 +++ job 8 <svisual> done: exit(0)
+20:43:06 Nov 06 2016 <project_2> done (25 sec)
+20:43:15 Nov 06 2016 <project_2> submitted to the batch system
+20:43:16 Nov 06 2016     job 10 <sdevice> started on host 'ug173.eecg.toronto.edu': "sdevice pp10_des.cmd"
+20:45:33 Nov 06 2016 +++ job 10 <sdevice> done: exit(0)
+20:45:35 Nov 06 2016 <project_2> done (140 sec)
+20:47:00 Nov 06 2016 <project_2> submitted to the batch system
+20:47:01 Nov 06 2016     job 11 <svisual> started on host 'ug173.eecg.toronto.edu': "svisual n11_vis.tcl"
+20:47:13 Nov 06 2016 +++ job 11 <svisual> done: exit(0)
+20:47:15 Nov 06 2016 <project_2> done (15 sec)
+20:47:30 Nov 06 2016 <project_2> submitted to the batch system
+20:47:30 Nov 06 2016     job 16 <sdevice> started on host 'ug173.eecg.toronto.edu': "sdevice pp16_des.cmd"
+20:55:13 Nov 06 2016 +++ job 16 <sdevice> done: exit(0)
+20:55:15 Nov 06 2016 <project_2> done (465 sec)
+20:55:30 Nov 06 2016 <project_2> submitted to the batch system
+20:55:30 Nov 06 2016     job 17 <svisual> started on host 'ug173.eecg.toronto.edu': "svisual n17_vis.tcl"
+20:56:01 Nov 06 2016 +++ job 17 <svisual> done: exit(0)
+20:56:04 Nov 06 2016 <project_2> done (34 sec)
+03:48:20 Oct 29 2017 <Project2> submitted to the batch system
+03:48:21 Oct 29 2017     job 3 <sde> started on host 'ug132.eecg.toronto.edu': "sde -e -l n3_dvs.cmd"
+03:48:25 Oct 29 2017 +++ job 3 <sde> done: exit(0)
+03:48:27 Oct 29 2017 <Project2> done (7 sec)
+03:48:45 Oct 29 2017 <Project2> submitted to the batch system
+03:48:47 Oct 29 2017 <Project2> done (2 sec)
+03:48:57 Oct 29 2017 <Project2> submitted to the batch system
+03:48:59 Oct 29 2017 <Project2> done (2 sec)

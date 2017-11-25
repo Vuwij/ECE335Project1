@@ -1,0 +1,117 @@
+**************************************************
+* Material parameter file for Silicon
+*************************************************
+
+Material = "Silicon" {
+
+* Band gap, electron affinity
+Bandgap
+{
+  * Eg = Eg0 + alpha Tpar^2 / (beta + Tpar) - alpha T^2 / (beta + T)
+  * Parameter 'Tpar' specifies the value of lattice 
+  * temperature, at which parameters below are defined
+  * Chi0 is electron affinity.
+  * Chi(300.0) = 4.01 eV
+  * Eg(300.0) = 1.12 eV
+        Chi0    = 4.01        # [eV]
+  	 Bgn2Chi = 0.5         # [1]
+        Eg0     = 1.12        # [eV]
+	dEg0(Bennett)	= 0.0000e+00	# [eV]
+	dEg0(Slotboom)= -4.7950e-03	# [eV]
+	dEg0(OldSlotboom)= -1.5950e-02	# [eV]
+	dEg0(delAlamo)   = -1.4070e-02	# [eV]
+	alpha	= 4.7300e-04	# [eV K^-1]
+	beta	= 6.3600e+02	# [K]
+	Tpar	= 0.0000e+00	# [K]
+ }
+
+Slotboom
+{ * deltaEg = dEg0 + Ebgn ( ln(N/Nref) + [ (ln(N/Nref))^2 + 0.5]^1/2 )
+  * dEg0 is defined in BandGap section 
+	Ebgn	= 6.9200e-03	# [eV]
+	Nref	= 1.3000e+17	# [cm^(-3)]
+}
+
+* electron DOS mass
+
+eDOSMass   
+{
+  * For effective mass specificatition Formula1 (me approximation):
+  * or Formula2 (Nc300) can be used :
+  * Formula2:
+  * me/m0 = (Nc300/2.540e19)^2/3 
+  * Nc(T) = Nc300 * (T/300)^3/2 
+  * me/m0(300.0) = 1.08
+  * Nc(300.0) = 2.800e+19 cm^(-3) 
+ 	Formula = 2            # [1]
+      Nc300   = 2.800e+19    # [cm-3]
+}
+
+
+* hole DOS mass
+
+hDOSMass
+{
+  * For effective mass specificatition Formula1 (mh approximation):
+  * or Formula2 (Nv300) can be used :
+  * Formula2:
+  * mh/m0 = (Nv300/2.540e19)^2/3 
+  * Nv(T) = Nv300 * (T/300)^3/2 
+  * mh/m0(300.0) = 0.56
+  * Nv(300.0) = 1.04e+19 cm^(-3) 
+  	Formula = 2           # [1]
+  	Nv300   = 1.04e+19    # [cm-3]
+}
+
+* Low field Mobility models: Constant mobility  and Doping dependent Mobility
+
+ConstantMobility:
+{ 
+  * mu_const = mumax (T/T0)^(-Exponent)
+  * mu_const_n(300.0) = 1350 cm^2/(Vs)
+  * mu_const_p(300.0) = 480 cm^2/(Vs)
+	mumax	= 1350, 480     # [cm^2/(Vs)]
+      Exponent = 2.50, 2.20 # [1]
+	mutunnel = 0.05, 0.05 # [cm^2/(Vs)]
+}
+
+HighFieldDependence:
+{ * Caughey-Thomas model:
+  * mu_highfield = mu_lowfield / ( 1 + (mu_lowfield E / vsat)^beta )^1/beta
+  * beta = beta0 (T/T0)^betaexp.
+	beta0	= 1.109 ,	1.213	# [1]
+	betaexp	= 0.66 ,	0.17	# [1]
+
+  * Smoothing parameter for HydroHighField Caughey-Thomas model:
+  * if Tl < Tc < (1+K_dT)*Tl, then smoothing between low field mobility
+  * and HydroHighField mobility is used.
+	K_dT	= 0.2 ,	0.2	# [1]
+  * Transferred-Electron Effect:
+  * mu_highfield = (mu_lowfield+(vsat/E)*(E/E0_TrEf)^4)/(1+(E/E0_TrEf)^4)
+	E0_TrEf	= 4.0000e+03 ,	4.0000e+03	# [1]
+	Ksmooth_TrEf	= 1 ,	1	# [1]
+
+ * For vsat either Formula1 or Formula2 can be used.
+	Vsat_Formula	= 1 ,	1	# [1]
+ * Formula1 for saturation velocity:
+ *            vsat = vsat0 (T/T0)^(-Vsatexp)
+ * (Parameter Vsat_Formula has to be not equal to 2)
+	vsat0	= 1.0700e+07 ,	8.3700e+06	# [1]
+	vsatexp	= 0.87 ,	0.52	# [1]
+}
+
+* Recombination parameters
+  Scharfetter * relation and trap level for SRH recombination:
+  { * tau = taumin + ( taumax - taumin ) / ( 1 + ( N/Nref )^gamma)
+    * tau(T) = tau * ( (T/300)^Talpha )          (TempDep)
+    * tau(T) = tau * exp( Tcoeff * ((T/300)-1) ) (ExpTempDep)
+	taumin	= 0.0000e+00 ,	0.0000e+00	# [s]
+	taumax	= 3.0e-03, 3.0e-3	# [s]
+	Nref	= 1.0000e+17 , 1.0000e+17	# [cm^(-3)]
+	gamma	= 1 ,	1	# [1] 
+	Talpha	= -1.5000e+00 , -1.5000e+00	# [1]
+	Tcoeff	= 2.55 ,	2.55	# [1]
+	Etrap	= 0.0000e+00 # [eV]
+  }
+}
+

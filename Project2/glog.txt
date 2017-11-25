@@ -1,0 +1,81 @@
+
+****************************************************************************
+***                       Sentaurus Workbench gsub                       ***
+***                          Version L-2016.03                           ***
+***                        (1.12, x86_64, Linux)                         ***
+***                                                                      ***
+***                Copyright (c) 1994-2016 Synopsys, Inc.                ***
+***                                                                      ***
+***  This software and the associated documentation are confidential     ***
+***  and proprietary to Synopsys, Inc.  Your use or disclosure of this   ***
+***  software is subject to the terms and conditions of a written        ***
+***  license agreement between you, or your company, and Synopsys, Inc.  ***
+****************************************************************************
+
+gsub is running on host 'ug132.eecg.toronto.edu' by user 'wangj261'
+Binary 'gsub'
+Command line options '-verbose -swb_pid 27410 -q local:default -e 1 /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2'
+Current directory '/homes/w/wangj261'
+Some relevant environment variables:
+	STROOT=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/..
+	STRELEASE=current
+	STROOT_LIB=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib
+	STDB=/homes/w/wangj261/SentaurusDB
+	DATEX=/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/datexcodes.txt
+	DISPLAY=:99
+
+Starting swblm daemon...OK
+Project '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2'
+Loading global tool database '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../tcad/current/lib/glib2/tooldb.tcl'
+Loading project tool database '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/gtooldb.tcl'
+03:48:57 Oct 29 2017 <Project2> submitted to the batch system
+Loading global queue configuration file '/CMC/tools/synopsys/sentaurus_vL_2016.03/bin/../queues/gqueues.dat'...ok
+Loading project tree '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/gtree.dat'
+>>>>>preprocessing the project for running in intelligent mode
+Loading jobs and dependence graph '"/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/gexec.cmd"'
+INITIALIZING PREPROCESSOR:
+Loading project tree '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/gtree.dat'
+Loading project variables '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/gvars.dat'
+--Get files to preprocess...
+--Create file handlers...
+--Read the toolflow...
+--Analyze tool-file dependencies...
+--Read all nodes to preprocess...
+--Group nodes into experiments...
+--Get all variables...
+--Get all parameters...
+PREPROCESSOR SUCCESSFULLY INITIALIZED.
+PREPROCESSING STEP 1:
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/sde_dvs.cmd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/sde_dvs.bnd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/IdVg_lin_des.cmd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/sdevice.par
+Include the contents of the  file 'Si.par in the file '/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/sdevice.par
+
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/PlotIdVg_lin_vis.tcl
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/IdVg_sat_des.cmd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/PlotIdVg_sat_vis.tcl
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/IdVd_des.cmd
+Reading file /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/PlotIdVd_vis.tcl
+WARNING: virtual node '1' excluded from preprocessing
+WARNING: no nodes could be retrieved
+PREPROCESSING STEP 2:
+Writing 'gexec.cmd'
+saving variables
+Loading jobs and dependence graph '"/nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/gexec.cmd"'
+Warning: node '1' not queued: node is virtual
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+>>>>> cleaning the index file from previous simulations 
+                       /nfs/ug/homes-4/w/wangj261/Documents/ECE335/Project2/.gindex
+>>>>>>>>>> Initializing back-end schedulers...
+>>>>>>>> Loaded Schedulers are ... 
+>>>>>>>>>> No active back-end scheduler
+>>>>> List of Active Schedulers : 
+<<<<<<<<<<
+
+SCHEDULING REPORT
+
+03:48:59 Oct 29 2017 <Project2> done (2 sec)
+>>>>>> Writing to status file 2
+gsub exits with status 0
